@@ -1,116 +1,161 @@
-<div class="container " style="background-color:grey ;margin :50px auto ;text-align:left" >
-    <form class="form-horizontal">
-        <div class="form-group row">
+<div class="container " style="background-color:grey ;margin :50px auto ;padding-top: 5%;
+text-align:left ">
+  <form class="form-horizontal">
 
-            <label for="inputName" class="col-sm-2 control-label">Name</label>
-            <div class="col-sm-4">
-              <input type="name" class="form-control" id="inputName" placeholder="Name">
-            </div>
+    <div class="form-group row">
 
-
-          <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-          <div class="col-sm-4">
-            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-          </div>
-          </div>
-          <div class="form-group row">
-          <label for="inputMobile" class="col-sm-2 control-label">Mobile</label>
-
-          <div class="col-sm-4">
-            <input type="mobile" class="form-control" id="inputMobile" placeholder="Mobile">
-          </div>
-
-
-        <label for="inputAmount" class="col-sm-2 control-label">Amount</label>
-        <div class="col-sm-4">
-          <input type="amount" class="form-control" id="inputEmail3" placeholder="Amount">
-        </div>
-        
+      <label for="inputName" class="col-sm-2 control-label">Name</label>
+      <div class="col-sm-4">
+        <input type="name" class="form-control" id="inputName" placeholder="Name">
       </div>
 
-        <div class="row form-group" >
-            <label  class="col-sm-2 control-label ">City</label>
-                <div class="col-sm-4">
-                    <select name="City" id="inputCity" class="form-control">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                    </div>
 
-        </div>
-        
-        <div class="row form-group" >
-        <div class=" col-sm-10 col-sm-offset-2">
-          <div class="row">
-            <div class="col-sm-12">
-                <label>Product Details</label>
-            </div>
-            
-            <div class="col-sm-12">
-                <table class="table table-bordered" id="productTable"  style="border-color:black">
-                    <tr>
-                        <th>#</th>
-                        <th>Field</th>
-                        <th>Action</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Name of product</td>
-                        <td>
-                          <input type="button" value="+" >
-                          <input type="button" value="-" >
-                        </td>
-                    </tr>
-                   </table> 
-                  
+      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+      <div class="col-sm-4">
+        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputMobile" class="col-sm-2 control-label">Mobile</label>
 
-            </div>
+      <div class="col-sm-4">
+        <input type="mobile" class="form-control" id="inputMobile" placeholder="Mobile">
+      </div>
+
+
+      <label for="inputAmount" class="col-sm-2 control-label">Amount</label>
+      <div class="col-sm-4">
+        <input type="amount" class="form-control" id="inputEmail3" placeholder="Amount">
+      </div>
+
+    </div>
+
+    <div class="row form-group">
+      <label class="col-sm-2 control-label ">City</label>
+      <div class="col-sm-4">
+        <select name="City" id="inputCity" class="form-control">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+    </div>
+
+    <div class="row form-group">
+      <div class=" col-sm-10 col-sm-offset-2">
+        <div class="row">
+          <div class="col-sm-12">
+            <label>Product Details</label>
           </div>
-          
-    
-          <div class="row">
-            <div class="col-sm-12">Form
-                <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" > 1
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked> 2
-                  </label>
-                  <label class="radio-inline">
-                    <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
-                  </label>
-            </div>
-         
-          </div>
-          
-          
-          <div class="row" id="form1" *ngIf="true">
-              <div class="col-sm-6">From Date <input type="date" ></div>
-              <div class="col-sm-6">To Date <input type="date"> </div>
-            </div>
 
-            <div class="row" id="form2" *ngIf="true">
-              <div class="col-sm-6"><b>Gender</b>
-                  <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked> Male
-                    </label>
-                    <label class="radio-inline">
-                      <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Female
-                    </label>
-              </div>  
+          <div class="col-sm-12">
+            <table class="table table-bordered" id="productTable" style="border-color:black">
+              <tr>
+                <th>#</th>
+                <th>Field</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Name of product</td>
+                <td>
+                  <input type="button" value="+">
+                  <input type="button" value="-">
+                </td>
+              </tr>
+            </table>
 
-            </div>
+
           </div>
         </div>
-</form>
+
+
+        <div class="row form-group">
+          <div class="col-sm-2">
+            <label for="">Form</label>
+          </div>
+          <div class="col-sm-10">
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked> 2
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+            </label>
+          </div>
+
+
+
+
+        </div>
+
+
+        <div class="row form-group" id="form1" *ngIf="true">
+          <div class="col-sm-2">
+            <label for="">From Date</label>
+          </div>
+          <div class="col-sm-4">
+            <input type="date">
+          </div>
+          <div class="col-sm-2">
+            <label for="">To Date</label>
+          </div>
+          <div class="col-sm-4">
+            <input type="date">
+          </div>
+        </div>
+
+        <div class="row form-group " id="form2" *ngIf="true">
+          <div class="col-sm-2">
+            <label for="">Gender</label>
+          </div>
+          <div class="col-sm-10">
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked> Male
+            </label>
+            <label class="radio-inline">
+              <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> Female
+            </label>
+          </div>
+        </div>
+
+        <div class="row form-group" id="form3">
+          <div class="col-sm-2">
+            <label for="">Document</label>
+          </div>
+
+          <div class="col-sm-10">
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox1" value="option1"> Aadhar
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox2" value="option2"> Electricity Bill
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox3" value="option3"> Voter ID
+            </label>
+            <label class="checkbox-inline">
+              <input type="checkbox" id="inlineCheckbox3" value="option3"> Bank Details
+            </label>
+          </div>
+        </div>
+
+        <div class="row form-group" id="formSubmit" style="margin-top:2em">
+          <div class="col-sm-2">
+            <button class="btn btn-default" type="submit">Save</button>
+
+          </div>
+          <div class="col-sm-2">
+            <button class="btn btn-default" type="submit">Reset</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </form>
 </div>
-  
-  
-   
-    
-    
-      
-
