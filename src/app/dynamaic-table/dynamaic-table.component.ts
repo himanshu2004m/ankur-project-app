@@ -8,28 +8,38 @@ import { Component, OnInit } from '@angular/core';
 export class DynamaicTableComponent implements OnInit {
 
   constructor() { }
+  private newAttribute :any ={};
+  private tableData:Array<any> =[
+    { 
+      productName:"mobile"
+
+    },
+    { 
+      productName:"ipad"
+
+    },
+    { 
+       productName:"earphone"
+
+    },
+  
+  
+  ]
 
   ngOnInit() {
   }
   addRow() {
+    this.tableData.push(this.newAttribute);
 
+    console.log(this.newAttribute);
     console.log('product added');
+    this.newAttribute = {};
+    console.log(this.tableData.length);
   }
-  deleteRow() {
-
+  deleteRow(i:number) {
+    this.tableData.splice(i,1);
     console.log('product deleted');
   }
 
-  private fieldArray: Array<any> = [];
-  private newAttribute: any = {};
-
-  addFieldValue() {
-      this.fieldArray.push(this.newAttribute)
-      this.newAttribute = {};
-  }
-
-  deleteFieldValue(index) {
-      this.fieldArray.splice(index, 1);
-  }
 
 }
