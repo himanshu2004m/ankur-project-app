@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DynamaicTableComponent implements OnInit {
 
   constructor() { }
+  private test;
   private newAttribute :any ={};
   private tableData:Array<any> =[
     { 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {User} from '../app/user'
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  userArray :Array<User> =[];
+  newUser :User ={name: '',email:'',mobile:'',amount:'',city:''
+};
 
+  public onSubmit(){
+      console.log(this.newUser);
 
+  }
   
 
 }
