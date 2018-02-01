@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GetDataFromUrlService} from '../get-data-from-url.service'
+import {Response} from '@angular/http';
 
 @Component({
   selector: 'app-json-table',
@@ -7,7 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JsonTableComponent implements OnInit {
 
-  constructor() { }
+  constructor(private getService: GetDataFromUrlService) {
+    this.getService.getdata().subscribe((data: Response) => {
+      console.log('data', data.json());
+    }, function(error){
+      console.log(error);
+    });
+
+   }
 
   ngOnInit() {
   }
