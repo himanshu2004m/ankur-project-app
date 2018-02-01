@@ -12,7 +12,7 @@ export class GetDataFromUrlService {
 
   getdata(){
     let data =this.data;
-    return this.http.get('https://jsonplaceholder.typicode.com/users');
+    return this.http.get('http://localhost:8085/getCities');
   }
 
 }
