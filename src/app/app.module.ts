@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { DynamaicFormComponent } from './dynamaic-form/dynamaic-form.component';
 import { DynamaicTableComponent } from './dynamaic-table/dynamaic-table.component';
 import { JsonTableComponent } from './json-table/json-table.component';
-import {GetDataFromUrlService} from './get-data-from-url.service'
+import {GetDataFromUrlService} from './get-data-from-url.service';
+import { PopoutModelComponent } from './popout-model/popout-model.component'
 @NgModule({
   declarations: [
     AppComponent,
     DynamaicFormComponent,
     DynamaicTableComponent,
-    JsonTableComponent
+    JsonTableComponent,
+    PopoutModelComponent
   ],
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule,HttpModule

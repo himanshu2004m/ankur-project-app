@@ -1,0 +1,75 @@
+<!-- Modal 1 Box-->
+<div class="modal fade" id="myModal" role="dialog" style="position:absolute">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <table>
+          <tr>
+            <td>
+              <label>ID</label>
+              <input type="text" class="text" value="{{user.name}}">
+            </td>
+          </tr>
+          <tr *ngIf="false">
+            <td>
+              <label>Name</label>
+              <input type="text" class="text" value="Himanshu">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label>Address</label>
+              <input type="text" class="textarea" value="">
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label>Mobile</label>
+              <input type="text" class="text" value="Mobile">
+            </td>
+          </tr>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Update</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Modal 2 Box it will be used only when we set data-target = #mymodal2 -->
+<div class="modal fade" id="myModal2" role="dialog" style="position:fixed">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal 2</h4>
+      </div>
+      <div class="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
