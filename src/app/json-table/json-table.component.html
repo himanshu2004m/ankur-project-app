@@ -31,8 +31,9 @@ border-color: black;margin :50px auto ;padding-top: 5%;text-align:left ">
                     </select>
                   </td>
                   <td>
-                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">View</button>
-                    <app-popout-model [user]="users[i]"></app-popout-model>
+                    <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" (click)="sendUser(users[i])">View</button>
+                    <app-popout-model [user]="clickedUser"></app-popout-model>
+                    
                   </td>
                 </tr>
                 <p>user: {{users[i].name}}
