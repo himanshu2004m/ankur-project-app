@@ -7,11 +7,41 @@ border-color: black;margin :50px auto ;padding-top: 5%;text-align:left ">
         <table class="table table-bordered" id="productTable">
           <thead>
             <tr>
-              <th>#</th>
-              <th>Field</th>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Mobile</th>
               <th>Action</th>
             </tr>
           </thead>
+          <tbody>
+            <tr *ngFor="let user of users; let index">
+              <td>{{user.id}}</td>
+              <td>{{user.name}}</td>
+              <td>{{user.address}}</td>
+              <td>{{user.mobile}}</td>
+              <td>
+                <tr>
+                  <td>
+                    <select multiple>
+                      <option value="ID">ID</option>
+                      <option value="Name">Name</option>
+                      <option value="Address">Address</option>
+                      <option value="Mobile">Mobile</option>
+                    </select>
+                  </td>
+                  <td>
+                    <input type="button" value="View">
+                  </td>
+                </tr>
+
+
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+          </tbody>
         </table>
       </div>
     </div>

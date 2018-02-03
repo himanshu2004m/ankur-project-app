@@ -25,5 +25,5 @@ app.get('/getCities', function(req, res){
 });
 http.listen(8085, function(){
     console.log(__dirname+"");
-  console.log('listening on *:9000');
+  console.log('listening on *:8085');
 }); 
