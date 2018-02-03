@@ -9,7 +9,7 @@ import { Input } from '@angular/core';
 export class PopoutModelComponent implements OnInit {
   @Input() user: any = { } ;
   constructor() {
-  console.log(this.user + "1");
+  console.log(this.user + '1');
 
    }
 
