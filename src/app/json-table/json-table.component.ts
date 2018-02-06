@@ -30,10 +30,10 @@ export class JsonTableComponent implements OnInit {
   ngOnInit() {
   }
 
-  sendUser(user: any) {
+  sendUser(user: any, evt) {
 
     this.clickedUser = user;
     console.log(this.clickedUser);
-   // console.log(evt);
+   console.log(evt.value);
   }
 }
