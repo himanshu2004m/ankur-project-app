@@ -9,23 +9,23 @@ export class DynamaicTableComponent implements OnInit {
 
   constructor() { }
   private test;
-  private newAttribute :any ={};
-  private tableData:Array<any> =[
-    { 
-      productName:"mobile"
+  private newAttribute: any = {};
+  private tableData: Array<any> = [
+    {
+      productName: 'mobile'
 
     },
-    { 
-      productName:"ipad"
+    {
+      productName: 'ipad'
 
     },
-    { 
-       productName:"earphone"
+    {
+       productName: 'earphone'
 
     },
-  
-  
-  ]
+
+
+  ];
 
   ngOnInit() {
   }
@@ -37,8 +37,8 @@ export class DynamaicTableComponent implements OnInit {
     this.newAttribute = {};
     console.log(this.tableData.length);
   }
-  deleteRow(i:number) {
-    this.tableData.splice(i,1);
+  deleteRow(i: number) {
+    this.tableData.splice(i, 1);
     console.log('product deleted');
   }
 

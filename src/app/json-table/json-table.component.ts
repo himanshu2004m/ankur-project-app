@@ -31,7 +31,9 @@ export class JsonTableComponent implements OnInit {
   }
 
   sendUser(user: any) {
+
     this.clickedUser = user;
     console.log(this.clickedUser);
+   // console.log(evt);
   }
 }
