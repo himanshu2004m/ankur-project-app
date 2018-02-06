@@ -3,3 +3,5 @@ https://stackoverflow.com/questions/46562305/angular-4-how-to-dynamically-add-an
 ?. ====> http://www.syntaxsuccess.com/viewarticle/elvis-operator-in-angular-2.0 
 
 https://www.toptal.com/angular-js/angular-4-forms-validation
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
