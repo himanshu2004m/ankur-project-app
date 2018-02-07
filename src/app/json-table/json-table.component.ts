@@ -8,12 +8,13 @@ import { HtmlTagDefinition } from '@angular/compiler';
 @Component({
   selector: 'app-json-table',
   templateUrl: './json-table.component.html',
-  styleUrls: ['./json-table.component.css']
+  styleUrls: ['./json-table.component.css'],
 })
 export class JsonTableComponent implements OnInit {
   users: Observable <Array<any>>;
   clickedUser: {};
-  
+  selectedOptions: string[]= [];
+
   constructor(private getService: GetDataFromUrlService) {
     // this.getService.getdata().subscribe((data: Response) => {
     //   console.log('data', data.json());
@@ -33,7 +34,8 @@ export class JsonTableComponent implements OnInit {
   sendUser(user: any, evt) {
 
     this.clickedUser = user;
+this.selectedOptions = evt.value.selectoptions;
     console.log(this.clickedUser);
-   console.log(evt.value);
+   console.log(this.selectedOptions);
   }
 }

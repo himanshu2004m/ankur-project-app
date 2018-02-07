@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { Input } from '@angular/core';
 
 @Component({
@@ -8,12 +8,16 @@ import { Input } from '@angular/core';
 })
 export class PopoutModelComponent implements OnInit {
   @Input() user: any = { } ;
+  @Input() selectedProperty: string[]= [];
   constructor() {
-  console.log(this.user + '1');
-
-   }
+}
 
   ngOnInit() {
-  }
 
+  }
+  // tslint:disable-next-line:use-life-cycle-interface
+  // ngOnChanges(changes: SimpleChanges){
+  //   console.log(changes);
+  //  // console.log(this.selectedProperty + '200');
+  // }
 }
