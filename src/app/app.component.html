@@ -9,10 +9,7 @@ text-align:left ">
       <div class="col-sm-4">
         <input name="name" class="form-control"  id="inputName" placeholder="Name" [(ngModel)]="newUser.name" #spyName>
       </div>
-
-      <p>TODO: remove this: {{spyName.className | json}}</p>
-
-      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
       <div class="col-sm-4">
         <input name="email" class="form-control" id="inputEmail3" placeholder="Email" [(ngModel)]="newUser.email" >
       </div>
@@ -71,4 +68,26 @@ text-align:left ">
     </div>
   </form>
 </div>
+
+<!-- text field to cheack validations -->
+<input id="name" name="name" 
+required minlength="4" forbiddenName="bob"
+[(ngModel)]="test" #name="ngModel" >
+
+<div *ngIf="name.invalid && (name.dirty || name.touched)"
+class="alert alert-danger">
+
+<div *ngIf="name.errors.required">
+Name is required.
+</div>
+<div *ngIf="name.errors.minlength">
+Name must be at least 4 characters long.
+</div>
+<div *ngIf="name.errors.forbiddenName">
+Name cannot be Bob.
+</div>
+
+</div>
+
+
 <app-json-table></app-json-table>

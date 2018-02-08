@@ -8,6 +8,7 @@ import {User} from '../app/user'
 })
 export class AppComponent {
   title = 'app';
+  private test;
   userArray :Array<User> =[];
   newUser :User ={name: '',email:'',mobile:'',amount:'',city:''
 };
