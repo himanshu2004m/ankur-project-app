@@ -23,7 +23,7 @@ border-color: black;margin :50px auto ;padding-top: 5%;text-align:left ">
               <td>
                 <tr>
                   <td>
-                    <select multiple name="selectoptions" ngModel>
+                    <select multiple name="selectoptions" ngModel style="width: 6em;">
                       <option *ngIf="user.id !='NA'" value="ID">ID</option>
                       <option *ngIf="user.name != 'NA'" value="Name">Name</option>
                       <option *ngIf="user.address != 'NA'" value="Address">Address</option>

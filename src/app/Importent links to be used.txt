@@ -5,3 +5,7 @@ https://stackoverflow.com/questions/46562305/angular-4-how-to-dynamically-add-an
 https://www.toptal.com/angular-js/angular-4-forms-validation
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
+
+http://jasonwatmore.com/post/2016/08/23/angular-2-pagination-example-with-logic-like-google
+
+blockchain: https://www.gartner.com/document/3778898?ref=gba-notifier_posting
