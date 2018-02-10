@@ -9,3 +9,5 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects
 http://jasonwatmore.com/post/2016/08/23/angular-2-pagination-example-with-logic-like-google
 
 blockchain: https://www.gartner.com/document/3778898?ref=gba-notifier_posting
+
+google maps angular 4 :https://angular-maps.com/api-docs/agm-core/injectables/MarkerManager.html
