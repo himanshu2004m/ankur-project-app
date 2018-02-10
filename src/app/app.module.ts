@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 import { DynamaicFormComponent } from './dynamaic-form/dynamaic-form.component';
 import { DynamaicTableComponent } from './dynamaic-table/dynamaic-table.component';
 import { JsonTableComponent } from './json-table/json-table.component';
-import {GetDataFromUrlService} from './get-data-from-url.service';
+import {GetDataFromUrlService} from './services/get-data-from-url.service';
 import { PopoutModelComponent } from './popout-model/popout-model.component';
-import {PagerServiceService} from './json-table/pager-service.service';
+import {PagerServiceService} from './services/pager-service.service';
 @NgModule({
   declarations: [
     AppComponent,

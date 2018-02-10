@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { GetDataFromUrlService } from '../get-data-from-url.service'
+import { GetDataFromUrlService } from '../services/get-data-from-url.service';
 import { Response, Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 import { HtmlTagDefinition } from '@angular/compiler';
-import { PagerServiceService } from './pager-service.service';
+import { PagerServiceService } from '../services/pager-service.service';
 @Component({
   selector: 'app-json-table',
   templateUrl: './json-table.component.html',
