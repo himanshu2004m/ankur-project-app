@@ -8,8 +8,7 @@ import { DynamaicTableComponent } from './dynamaic-table/dynamaic-table.componen
 import { JsonTableComponent } from './json-table/json-table.component';
 import {GetDataFromUrlService} from './get-data-from-url.service';
 import { PopoutModelComponent } from './popout-model/popout-model.component';
-import { PagenationComponent } from './pagenation/pagenation.component';
-import {PagerServiceService} from './pagenation/pager-service.service';
+import {PagerServiceService} from './json-table/pager-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +16,6 @@ import {PagerServiceService} from './pagenation/pager-service.service';
     DynamaicTableComponent,
     JsonTableComponent,
     PopoutModelComponent,
-    PagenationComponent
   ],
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule,HttpModule
