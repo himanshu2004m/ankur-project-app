@@ -1,21 +1,34 @@
-<agm-map [latitude]="lat" [longitude]="long">
-  <agm-marker [latitude]="lat" [longitude]="long"></agm-marker>
+<agm-map 
+  [latitude]="lat"
+  [longitude]="lng"
+ 
+  (mapClick)="mapClicked($event)">
+
+  <agm-marker *ngFor = "let m of markers"
+      [latitude]="m.lat"
+      [longitude]="m.lng"
+      [markerDraggable]="m.draggable"></agm-marker>
+      
 </agm-map>
-<div class="container " style="background-color:grey ;margin :50px auto ;padding-top: 5%;
+
+
+
+
+<div class="container " style="background-color:grey ;margin :5px auto ;padding-top: 5%;
 text-align:left ">
   <form class="form-horizontal" #fullForm="ngForm">
 
     <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 control-label">Latitude</label>
       <div class="col-sm-4">
-        <input type="number" name="latitude" class="form-control" id="inputLatitude" placeholder="Latitude" [(ngModel)]="lat" >
+        <input type="number" step="0.000001" min="-90" max="90" name="latitude" class="form-control" id="inputLatitude" placeholder="Latitude" [(ngModel)]="lat" >
       </div>
       <label for="inputName" class="col-sm-2 control-label">Longitude</label>
       <div class="col-sm-4">
-        <input type="number" name="longitude" class="form-control" id="inputLongitude" placeholder="Longitude" [(ngModel)]="long" >
+        <input type="number" step="0.000001" min="-180" max="180" name="longitude" class="form-control" id="inputLongitude" placeholder="Longitude" [(ngModel)]="lng" >
       </div>
     </div>
-    <button style="text-align:center;" (click)="saveLocation(lat,long)">Save</button>
+    <button style="text-align:center;" (click)="saveLocation(lat,lng)">Save</button>
     </form>
     
   </div>
