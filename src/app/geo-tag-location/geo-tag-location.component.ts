@@ -13,6 +13,7 @@ export class GeoTagLocationComponent implements OnInit {
   zoom=6;
   lat = 22.719568;
   lng = 75.857727;
+  flag=false;
   
   markers: marker[] = [
     {
@@ -37,9 +38,17 @@ export class GeoTagLocationComponent implements OnInit {
   }
 
     mapClicked($event: MouseEvent){
-      this.lat=$event.coords.lat,
-      this.lng=$event.coords.lng,
-      console.log(this.markers);
+      this.lat=$event.coords.lat;
+      this.lng=$event.coords.lng;
+      }
+    clickedMarker(lab:string,i:number){
+        
+        this.flag=true;
+
+    }
+    showInfo($event)
+    {
+      console.log($event);
     }
 }
 // just an interface for type safety.

@@ -11,12 +11,20 @@ text-align:left ">
         [latitude]="lat"
         [longitude]="lng"
         [zoom]="zoom"
-        (mapClick)="mapClicked($event)">
-      
+        (mapDblClick)="showInfo($event)"
+        (mapClick)="mapClicked($event)"
+        (markerClick)="clickedMarker(m.label, i)">
+
         <agm-marker *ngFor = "let m of markers"
             [latitude]="m.lat"
             [longitude]="m.lng"
-            [markerDraggable]="m.draggable"></agm-marker>
+            [openInfoWindow]="true"
+            [markerDraggable]="m.draggable">
+          
+            <agm-info-window *ngIf="true">
+                <strong>{{m.label}}</strong>
+              </agm-info-window>
+          </agm-marker>
             
       </agm-map>
       </div>
