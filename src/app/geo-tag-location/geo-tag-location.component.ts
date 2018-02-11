@@ -10,13 +10,15 @@ import { MouseEvent } from '@agm/core';
 export class GeoTagLocationComponent implements OnInit {
   title = 'My first AGM project';
   draggable= true;
-  lat = 23.12;
-  lng = 75.54;
+  zoom=6;
+  lat = 22.719568;
+  lng = 75.857727;
+  
   markers: marker[] = [
     {
-		  lat: 51.673858,
-		  lng: 7.815982,
-		  label: 'A',
+		  lat: 22.719568,
+		  lng: 75.857727,
+		  label: 'Indore',
 		  draggable: true
 	  }
   ];
@@ -26,18 +28,17 @@ export class GeoTagLocationComponent implements OnInit {
   ngOnInit() {
   }
 
-  saveLocation(lat: number, lng: number){
-    console.log(lat);
-    this.lat = lat;
-    this.lng = lng;
+  saveLocation(lat: number, lng: number,label:string){
+    this.markers.push({
+      lat,
+      lng,
+      label,
+      draggable: true});
   }
 
     mapClicked($event: MouseEvent){
-   
-    this.markers.push({
-        lat: $event.coords.lat,
-        lng: $event.coords.lng,
-        draggable: true});
+      this.lat=$event.coords.lat,
+      this.lng=$event.coords.lng,
       console.log(this.markers);
     }
 }
