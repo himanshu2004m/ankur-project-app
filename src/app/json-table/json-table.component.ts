@@ -34,7 +34,7 @@ export class JsonTableComponent implements OnInit {
     this.getService.getdata().map(res => res.json()).subscribe(users2 => {
       // set items to json response
       this.allItems = users2;
-      console.log(users2);
+     // console.log(users2);
       // initialize to page 1
       this.setPage(1);
     });
@@ -45,8 +45,8 @@ export class JsonTableComponent implements OnInit {
     this.flag = true;
     this.clickedUser = user;
     this.selectedOptions = evt.value.selectoptions;
-    console.log(this.clickedUser);
-    console.log(this.selectedOptions);
+    // console.log(this.clickedUser);
+    // console.log(this.selectedOptions);
   }
 
   setPage(page: number) {

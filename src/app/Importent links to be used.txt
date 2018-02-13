@@ -11,3 +11,5 @@ http://jasonwatmore.com/post/2016/08/23/angular-2-pagination-example-with-logic-
 blockchain: https://www.gartner.com/document/3778898?ref=gba-notifier_posting
 
 google maps angular 4 :https://angular-maps.com/api-docs/agm-core/injectables/MarkerManager.html
+
+https://www.code-sample.com/2017/04/angular-4-interview-questions-and.html
