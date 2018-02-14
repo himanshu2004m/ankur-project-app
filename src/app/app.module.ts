@@ -11,6 +11,7 @@ import { PopoutModelComponent } from './popout-model/popout-model.component';
 import {PagerServiceService} from './services/pager-service.service';
 import { GeoTagLocationComponent } from './geo-tag-location/geo-tag-location.component';
 import { AgmCoreModule } from '@agm/core';
+import { ShowErrorsComponent } from './show-errors/show-errors.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AgmCoreModule } from '@agm/core';
     JsonTableComponent,
     PopoutModelComponent,
     GeoTagLocationComponent,
+    ShowErrorsComponent,
   ],
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule,HttpModule,

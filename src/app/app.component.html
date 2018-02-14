@@ -1,5 +1,26 @@
+<!-- text field to cheack validations remove false to true -->
+<div *ngIf="true" style="margin-top: 5%">
+    <input id="name" name="name" required minlength="4" forbiddenName="bob" [(ngModel)]="test" #name="ngModel">
+  
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+  
+      <div *ngIf="name.errors.required">
+        Name is required.
+      </div>
+      <div *ngIf="name.errors.minlength">
+        Name must be at least 4 characters long.
+      </div>
+      <div *ngIf="name.errors.forbiddenName">
+        Name cannot be Bob.
+      </div>
+    </div>
+    </div>
 
-
+    <div>
+  <label>Birth Year</label>
+  <input type="text" name="birthYear" #birthYear="ngModel" ngModel required pattern="\\d{4,4}"/>
+  <show-errors [control]="birthYear"></show-errors>
+</div>
 
 <div class="container " style="background-color:grey ;margin :50px auto ;padding-top: 5%;
 text-align:left ">
@@ -74,20 +95,3 @@ text-align:left ">
 
 <app-geo-tag-location></app-geo-tag-location>
 
-<!-- text field to cheack validations remove false to true -->
-<div *ngIf="false">
-  <input id="name" name="name" required minlength="4" forbiddenName="bob" [(ngModel)]="test" #name="ngModel">
-
-  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-
-    <div *ngIf="name.errors.required">
-      Name is required.
-    </div>
-    <div *ngIf="name.errors.minlength">
-      Name must be at least 4 characters long.
-    </div>
-    <div *ngIf="name.errors.forbiddenName">
-      Name cannot be Bob.
-    </div>
-  </div>
-  </div>
