@@ -35,11 +35,16 @@ export class ShowErrorsComponent implements OnInit {
   }
 
   listOfErrors(): string[] {
+    console.log("control",this.control);
+    console.log("control errors",this.control.errors);
+    console.log("object keys",Object.keys(this.control.errors));
     return Object.keys(this.control.errors)
-      .map(field => this.getMessage(field, this.control.errors[field]));
+      .map((x) => this.getMessage(x, this.control.errors[x]));
   }
 
   private getMessage(type: string, params: any) {
+    console.log("type",type);
+    console.log("params",params);
     return ShowErrorsComponent.errorMessages[type](params);
   }
 

@@ -1,4 +1,4 @@
-<!-- text field to cheack validations remove false to true -->
+<!-- text field to cheack validations remove false to true
 <div *ngIf="true" style="margin-top: 5%">
     <input id="name" name="name" required minlength="4" forbiddenName="bob" [(ngModel)]="test" #name="ngModel">
   
@@ -18,19 +18,19 @@
 
     <div>
   <label>Birth Year</label>
-  <input type="text" name="birthYear" #birthYear="ngModel" ngModel required pattern="\\d{4,4}"/>
+  <input type="text" name="birthYear" countryCity="jaora" #birthYear="ngModel" ngModel [required]="true"/>
   <show-errors [control]="birthYear"></show-errors>
-</div>
+</div> -->
 
 <div class="container " style="background-color:grey ;margin :50px auto ;padding-top: 5%;
 text-align:left ">
-  <form class="form-horizontal" #fullForm="ngForm">
-
+  <form (ngSubmit)="onSubmit(fullForm)" class="form-horizontal" #fullForm="ngForm">
+    <div>{{fullForm.valid}}</div>
     <div class="form-group row">
 
       <label for="inputName" class="col-sm-2 control-label">Name</label>
       <div class="col-sm-4">
-        <input name="name" class="form-control" id="inputName" placeholder="Name" [(ngModel)]="newUser.name" #spyName>
+        <input name="name" class="form-control" id="inputName"  [pattern]="myPattern" placeholder="Name" [(ngModel)]="newUser.name">
       </div>
       <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
       <div class="col-sm-4">
@@ -79,11 +79,11 @@ text-align:left ">
 
         <div class="row form-group" id="formSubmit" style="margin-top:2em">
           <div class="col-sm-2">
-            <button class="btn btn-default" type="submit" (click)="onSubmit()">Save</button>
+            <button [disabled]="!fullForm.valid" class="btn btn-default" type="submit">Save</button>
 
           </div>
           <div class="col-sm-2">
-            <button class="btn btn-default" type="submit">Reset</button>
+            <button class="btn btn-default" type="text">Reset</button>
           </div>
         </div>
 
@@ -92,6 +92,6 @@ text-align:left ">
   </form>
 </div>
 <app-json-table></app-json-table>
-
-<app-geo-tag-location></app-geo-tag-location>
+<!-- 
+<app-geo-tag-location></app-geo-tag-location> -->
 

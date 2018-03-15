@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import {User} from '../app/user'
 
 @Component({
@@ -6,16 +6,23 @@ import {User} from '../app/user'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  myPattern=new RegExp('\\d{4,4}');
+ 
   title = 'app';
   private test;
   userArray :Array<User> =[];
   newUser :User ={name: '',email:'',mobile:'',amount:'',city:''
 };
 
-  public onSubmit(){
+  public onSubmit(form){
+    console.log("form",form.value);
       console.log(this.newUser);
 
+  }
+
+  ngOnInit(){
+    console.log("mypattern",this.myPattern);
   }
   
 
