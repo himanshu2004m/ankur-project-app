@@ -12,6 +12,7 @@ import {PagerServiceService} from './services/pager-service.service';
 import { GeoTagLocationComponent } from './geo-tag-location/geo-tag-location.component';
 import { AgmCoreModule } from '@agm/core';
 import { ShowErrorsComponent } from './show-errors/show-errors.component';
+import { LoginPageComponent } from './login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { ShowErrorsComponent } from './show-errors/show-errors.component';
     PopoutModelComponent,
     GeoTagLocationComponent,
     ShowErrorsComponent,
+    LoginPageComponent,
   ],
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule,HttpModule,
