@@ -13,6 +13,16 @@ import { GeoTagLocationComponent } from './geo-tag-location/geo-tag-location.com
 import { AgmCoreModule } from '@agm/core';
 import { ShowErrorsComponent } from './show-errors/show-errors.component';
 import { LoginPageComponent } from './login-page/login-page.component';
+import { SearchTextPipe } from './pipes/search-text.pipe';
+import { RouterModule, Routes } from '@angular/router';
+import { BasicDetailsFormComponent } from './basic-details-form/basic-details-form.component';
+
+const appRoutes:Routes =[
+{path:'json-table' ,component:JsonTableComponent},
+{path:'geo-tag',component:GeoTagLocationComponent},
+{path:'login',component:LoginPageComponent},
+{path:'**',component:BasicDetailsFormComponent}
+]
 
 @NgModule({
   declarations: [
@@ -24,9 +34,14 @@ import { LoginPageComponent } from './login-page/login-page.component';
     GeoTagLocationComponent,
     ShowErrorsComponent,
     LoginPageComponent,
+    SearchTextPipe,
+    BasicDetailsFormComponent,
   ],
   imports: [
     BrowserModule,FormsModule, ReactiveFormsModule,HttpModule,
+    RouterModule.forRoot(appRoutes,
+      {enableTracing:true}
+    ),
     AgmCoreModule.forRoot({
       apiKey:'AIzaSyDlVEV8TrOjvnbN1SQetsM9ohjkcPl2Mss'
     })

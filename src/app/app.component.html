@@ -1,97 +1,16 @@
-<!-- text field to cheack validations remove false to true
-<div *ngIf="true" style="margin-top: 5%">
-    <input id="name" name="name" required minlength="4" forbiddenName="bob" [(ngModel)]="test" #name="ngModel">
-  
-    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-  
-      <div *ngIf="name.errors.required">
-        Name is required.
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
       </div>
-      <div *ngIf="name.errors.minlength">
-        Name must be at least 4 characters long.
-      </div>
-      <div *ngIf="name.errors.forbiddenName">
-        Name cannot be Bob.
-      </div>
+      <ul class="nav navbar-nav">
+        <li ><a href="#"routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/json-table" routerLinkActive="active">json-table</a></li>
+        <li><a routerLink="/geo-tag" routerLinkActive="active">geo-tag</a></li>
+        <li><a routerLink="/login" routerLinkActive="active">Login Page</a></li>
+      </ul>
     </div>
-    </div>
-
-    <div>
-  <label>Birth Year</label>
-  <input type="text" name="birthYear" countryCity="jaora" #birthYear="ngModel" ngModel [required]="true"/>
-  <show-errors [control]="birthYear"></show-errors>
-</div> -->
-
-<div class="container " style="background-color:grey ;margin :50px auto ;padding-top: 5%;
-text-align:left ">
-  <form (ngSubmit)="onSubmit(fullForm)" class="form-horizontal" #fullForm="ngForm">
-    <div>{{fullForm.valid}}</div>
-    <div class="form-group row">
-
-      <label for="inputName" class="col-sm-2 control-label">Name</label>
-      <div class="col-sm-4">
-        <input name="name" class="form-control" id="inputName"  [pattern]="myPattern" placeholder="Name" [(ngModel)]="newUser.name">
-      </div>
-      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-      <div class="col-sm-4">
-        <input name="email" class="form-control" id="inputEmail3" placeholder="Email" [(ngModel)]="newUser.email">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="inputMobile" class="col-sm-2 control-label">Mobile</label>
-
-      <div class="col-sm-4">
-        <input name="mobile" class="form-control" id="inputMobile" placeholder="Mobile" [(ngModel)]="newUser.mobile">
-      </div>
-
-
-      <label for="inputAmount" class="col-sm-2 control-label">Amount</label>
-      <div class="col-sm-4">
-        <input name="amount" class="form-control" id="inputAmount" placeholder="Amount" [(ngModel)]="newUser.amount">
-      </div>
-
-    </div>
-
-    <div class="row form-group">
-      <label for="inputCity" class="col-sm-2 control-label ">City</label>
-      <div class="col-sm-4">
-        <select name="City" id="inputCity" class="form-control" [(ngModel)]="newUser.city">
-          <option>Ujjain</option>
-          <option>Indore</option>
-          <option>Bombay</option>
-          <option>Pune</option>
-          <option>Goa</option>
-        </select>
-      </div>
-
-    </div>
-
-    <div class="row form-group">
-      <div class=" col-sm-10 col-sm-offset-2">
-        <div class="row">
-          <div class="col-sm-12">
-            <label>Product Details</label>
-          </div>
-
-          <app-dynamaic-table>Dynamic table Loading</app-dynamaic-table>
-        </div>
-        <app-dynamaic-form>Dynamic Form Loading</app-dynamaic-form>
-
-        <div class="row form-group" id="formSubmit" style="margin-top:2em">
-          <div class="col-sm-2">
-            <button [disabled]="!fullForm.valid" class="btn btn-default" type="submit">Save</button>
-
-          </div>
-          <div class="col-sm-2">
-            <button class="btn btn-default" type="text">Reset</button>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </form>
-</div>
-<app-json-table></app-json-table>
-<!-- 
-<app-geo-tag-location></app-geo-tag-location> -->
+  </nav>
+  <router-outlet></router-outlet>
 
