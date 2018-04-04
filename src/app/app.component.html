@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-=======
-<!-- text field to cheack validations remove false to true
-<div *ngIf="true" style="margin-top: 5%">
-    <input id="name" name="name" required minlength="4" forbiddenName="bob" [(ngModel)]="test" #name="ngModel">
-  
-    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
-  
-      <div *ngIf="name.errors.required">
-        Name is required.
-      </div>
-      <div *ngIf="name.errors.minlength">
-        Name must be at least 4 characters long.
-      </div>
-      <div *ngIf="name.errors.forbiddenName">
-        Name cannot be Bob.
-      </div>
-    </div>
-    </div>
-
-    <div>
-  <label>Birth Year</label>
-  <input type="text" name="birthYear" countryCity="jaora" #birthYear="ngModel" ngModel [required]="true"/>
-  <show-errors [control]="birthYear"></show-errors>
-</div> -->
-
-<div class="container " style="background-color:grey ;margin :49px auto ;padding-top: 5%;
-text-align:left ">
-  <form (ngSubmit)="onSubmit(fullForm)" class="form-horizontal" #fullForm="ngForm">
-    <div>{{fullForm.valid}}</div>
-    <div class="form-group row">
-
-      <label for="inputName" class="col-sm-2 control-label">Name</label>
-      <div class="col-sm-4">
-        <input name="name" class="form-control" id="inputName"  [pattern]="myPattern" placeholder="Name" [(ngModel)]="newUser.name">
-      </div>
-      <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
-      <div class="col-sm-4">
-        <input name="email" class="form-control" id="inputEmail3" placeholder="Email" [(ngModel)]="newUser.email">
-      </div>
-    </div>
-    <div class="form-group row">
-      <label for="inputMobile" class="col-sm-2 control-label">Mobile</label>
-
-      <div class="col-sm-4">
-        <input name="mobile" class="form-control" id="inputMobile" placeholder="Mobile" [(ngModel)]="newUser.mobile">
-      </div>
-
->>>>>>> 0e7f747681867b5d068e9355fbb3dfaa026c2422
-
 <nav class="navbar navbar-default">
     <div class="container-fluid">
       <div class="navbar-header">
@@ -62,4 +12,3 @@ text-align:left ">
     </div>
   </nav>
   <router-outlet></router-outlet>
-
