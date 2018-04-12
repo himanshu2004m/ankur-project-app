@@ -1,0 +1,24 @@
+
+ 
+    <label for="inputName" class="col-sm-2 control-label">Name</label>
+    <div class="col-sm-4">
+      <input type="Name" class="form-control" id="inputName" placeholder="Name" [(ngModel)]="newUser.name" >
+    </div>
+
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-4">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email" [(ngModel)]="newUser.email">
+    </div>
+  
+  
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-4">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="Password" [(ngModel)]="newUser.password">
+    </div>
+  
+  
+  
+    <div class="col-sm-offset-2 col-sm-10">
+      <button (click)="onSave()"class="btn btn-default">Save</button>
+    </div>
+

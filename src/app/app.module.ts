@@ -16,12 +16,14 @@ import { LoginPageComponent } from './login-page/login-page.component';
 import { SearchTextPipe } from './pipes/search-text.pipe';
 import { RouterModule, Routes } from '@angular/router';
 import { BasicDetailsFormComponent } from './basic-details-form/basic-details-form.component';
+import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
 
-const appRoutes:Routes =[
-{path:'json-table' ,component:JsonTableComponent},
-{path:'geo-tag',component:GeoTagLocationComponent},
-{path:'login',component:LoginPageComponent},
-{path:'**',component:BasicDetailsFormComponent}
+const appRoutes: Routes = [
+{path: 'json-table' , component: JsonTableComponent},
+{path: 'geo-tag', component: GeoTagLocationComponent},
+{path: 'login', component: LoginPageComponent},
+{path: 'signUp', component: SignUpFormComponent},
+{path: '**', component: LoginPageComponent}
 ]
 
 @NgModule({
@@ -36,17 +38,18 @@ const appRoutes:Routes =[
     LoginPageComponent,
     SearchTextPipe,
     BasicDetailsFormComponent,
+    SignUpFormComponent,
   ],
   imports: [
-    BrowserModule,FormsModule, ReactiveFormsModule,HttpModule,
-    RouterModule.forRoot(appRoutes,
-      {enableTracing:true}
+    BrowserModule, FormsModule, ReactiveFormsModule, HttpModule,
+    RouterModule.forRoot(appRoutes
+      //{enableTracing: true}
     ),
     AgmCoreModule.forRoot({
-      apiKey:'AIzaSyDlVEV8TrOjvnbN1SQetsM9ohjkcPl2Mss'
+      apiKey: 'AIzaSyDlVEV8TrOjvnbN1SQetsM9ohjkcPl2Mss'
     })
   ],
-  providers: [GetDataFromUrlService,PagerServiceService],
+  providers: [GetDataFromUrlService, PagerServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
